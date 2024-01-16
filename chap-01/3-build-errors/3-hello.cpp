@@ -1,5 +1,7 @@
-int main()
-{
+#include <iostream>
+#include <string>
+
+int main() {
     std::string name;
     std::cin >> name;
 
