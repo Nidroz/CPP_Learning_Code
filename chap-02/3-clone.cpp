@@ -25,21 +25,17 @@ private:
 };
 
 class Batmobile {
-    ~Batmobile() {
-        std::cout << "The Batmobile has been destroyed!" << std::endl;
-    };
-
     private:
         Person _batman { "Bruce", "Wayne" };
 };
 
 int main()
 {
-    Person batman { "Bruce", "Wayne" };
-    batman.wait(23);
+    {
+        Batmobile batmobile;
+    }
 
-    std::cout << "Person named '" << batman.get_full_name() << "' is " << batman.get_age() << " years old."
-              << std::endl;
+    std::cout << "After block" << std::endl;
 
     return 0;
 }
