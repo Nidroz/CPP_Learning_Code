@@ -15,19 +15,14 @@ int main()
     std::cout << "{ L: " << square.get_length() << ", W: " << square.get_width() << " }" << std::endl;
 
     // default Rectangle
-    Rectangle::_default_size = 2.f;
+    Rectangle::set_default_size(2.f);
     Rectangle s1; // -> size is 2.f
     Rectangle s2; // -> size is 2.f
-    std::cout << "s1 size is -> " << s1._default_size << std::endl;
-    std::cout << "s2 size is -> " << s2._default_size << std::endl;
 
-    Rectangle::_default_size = 7.f;
+    Rectangle::set_default_size(7.f);
     Rectangle s3; // -> size is 7.f
     Rectangle s4; // -> size is 7.f
     Rectangle s5; // -> size is 7.f
-    std::cout << "s3 size is -> " << s3._default_size << std::endl;
-    std::cout << "s4 size is -> " << s4._default_size << std::endl;
-    std::cout << "s5 size is -> " << s5._default_size << std::endl;
 
     return 0;
 }
