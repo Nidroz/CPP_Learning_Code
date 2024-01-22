@@ -1,6 +1,12 @@
 // Implement Rectangle functions here.
 #include "Rectangle.h"
 
+//float Rectangle::_default_size = 0.f;
+
+Rectangle::Rectangle()
+    : Rectangle::Rectangle { _default_size }
+    {}
+
 Rectangle::Rectangle(float size) 
     : Rectangle::Rectangle { size, size }
     {}

@@ -11,6 +11,9 @@ public:
 
     void scale(float ratio);
 
+    static inline float _default_size;
+    Rectangle();
+
 private:
     float _length;
     float _width;
