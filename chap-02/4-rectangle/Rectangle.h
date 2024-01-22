@@ -3,6 +3,7 @@
 class Rectangle
 {
 public:
+    Rectangle(float size);
     Rectangle(float length, float width);
 
     float get_length() const { return _length; }
