@@ -14,10 +14,23 @@ public:
 
     void wait(unsigned int years) { _age += years; }
 
+    ~Person() {
+        std::cout << get_full_name() << " died at " << get_age() << " years old" << std::endl;
+    }
+
 private:
     std::string  _name;
     std::string  _surname;
     unsigned int _age = 0u;
+};
+
+class Batmobile {
+    ~Batmobile() {
+        std::cout << "The Batmobile has been destroyed!" << std::endl;
+    };
+
+    private:
+        Person _batman { "Bruce", "Wayne" };
 };
 
 int main()
