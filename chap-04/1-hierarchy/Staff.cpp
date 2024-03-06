@@ -3,12 +3,10 @@
 #include <cstdio>
 
 Staff::Staff(std::string_view name, std::string_view surname, unsigned int salary)
-    : _name { name }
-    , _surname { surname }
-    , _salary { salary }
+    : Employee { name, surname, salary, Rank::Slave }
 {}
 
-void Staff::increase_salary(unsigned int raise)
+void Employee::increase_salary(unsigned int raise)
 {
     _salary += raise;
 }
