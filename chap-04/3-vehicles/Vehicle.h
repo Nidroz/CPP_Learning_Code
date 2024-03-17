@@ -35,12 +35,10 @@ public:
 
     virtual ~Vehicle() {}
 
-    virtual unsigned int drive() const
-    {
-        std::cerr << "Not implemented" << std::endl;
-        return 0u;
-    }
+    virtual unsigned int drive() const = 0;
 
 protected:
+    
+
     const Driver& _driver;
 };

@@ -7,6 +7,17 @@
 
 int main()
 {
+    // Vehicule abstrait
+    //Driver test_driver;
+    //Vehicle vehicle { test_driver };
+
+    // Constructeur protégé => erreur de compilation comme quoi Vehicle est 'protected',
+    // de ce fait on ne peut pas l'instancier (comportement voulu)
+
+    // Fonction virtuelle pure => erreur de compilation comme quoi on ne peut pas déclarer Vehicle abstrait,
+    // dû au fait que la fonction 'drive' est virtual pure
+
+    //////
     Driver     car_driver;
     Car        car { car_driver, 60u };
     const auto distance_in_car = car.drive();
