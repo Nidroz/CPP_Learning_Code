@@ -1,6 +1,7 @@
 #include "Car.h"
 #include "Scooter.h"
 #include "Vehicle.h"
+#include "FlyingCar.hpp"
 
 #include <iostream>
 
@@ -15,6 +16,12 @@ int main()
     Scooter    scooter { mini_gangster, 180u };
     const auto distance_in_scooter = scooter.drive();
     std::cout << distance_in_scooter << " km with a scooter." << std::endl;
+
+    Driver ben_laden;
+    ben_laden.pass_air_licence_exam();
+    FlyingCar flyingCar { ben_laden, 390u };
+    const auto distance_in_flying_car = flyingCar.drive();
+    std::cout << distance_in_flying_car << " km with a flying car." << std::endl;
 
     return 0;
 }
